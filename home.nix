@@ -13,6 +13,7 @@
     programs.vesktop.enable = true;
     programs.vscode.enable = true;
     programs.firefox.enable = true;
+    programs.btop.enable = true;
     programs.anki = {
       enable = true;
       theme = "dark";
