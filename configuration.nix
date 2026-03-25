@@ -57,7 +57,7 @@
   users.users.green1490 = {
     isNormalUser = true;
     description = "green1490";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "incus-admin" ];
     packages = with pkgs; [];
   };
 
@@ -75,6 +75,10 @@
      pipewire
      wireplumber
   ];
+
+  virtualisation.incus.enable = true;
+  # for incus
+  networking.nftables.enable = true;
 
   services.displayManager.sddm = {
     enable = true;
