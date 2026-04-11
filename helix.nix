@@ -1,17 +1,21 @@
 {config, pkgs, ...}:
 
 {
+  home.packages = with pkgs; [
+    nixd  
+  ];
+  
   programs.helix = {
-    enable = true;
-    language = [
-      {
+    enable = true;  
+    languages = {
+      language = [{
         name = "nix";
-        language-servers = ["nixd"];
-      }
-    ];
-
-    language-server.nixd = {
-      command = "nixd";
+        language-servers = [ "nixd" ];
+      }];
+      
+      language-server.nixd = {
+        command = "nixd";
+      };
     };
   };
 }

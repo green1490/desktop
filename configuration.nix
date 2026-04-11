@@ -52,6 +52,7 @@
   console.keyMap = "hu";
   
   users.defaultUserShell = pkgs.zsh;
+  programs.hyprland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.green1490 = {
@@ -66,11 +67,8 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-
-  programs.hyprland.enable = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1"; 
+  
   environment.systemPackages = with pkgs; [
-     kitty
      dunst
      pipewire
      wireplumber
