@@ -51,7 +51,6 @@
   # Configure console keymap
   console.keyMap = "hu";
   
-  users.defaultUserShell = pkgs.zsh;
   programs.hyprland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -74,8 +73,8 @@
      wireplumber
   ];
 
-  virtualisation.incus.enable = true;
   # for incus
+  virtualisation.incus.enable = true;
   networking.nftables.enable = true;
 
   services.displayManager.sddm = {
@@ -107,6 +106,7 @@
     };
   };
 
+  users.defaultUserShell = pkgs.zsh;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -114,7 +114,6 @@
     shellInit = "eval \"$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/tonybaloney.omp.json)\"";
   };
 
-  programs.zsh.ohMyZsh.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # Some programs need SUID wrappers, can be configured further or are

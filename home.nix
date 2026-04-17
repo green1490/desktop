@@ -5,7 +5,7 @@
   imports = [
     ./helix.nix
     ./anki.nix
-    ./posh.nix
+    ./zsh.nix
     ./wofi.nix
     ./waybar.nix
     ./hyprland.nix
