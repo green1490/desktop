@@ -9,6 +9,7 @@
     ./wofi.nix
     ./waybar.nix
     ./hyprland.nix
+    ./zen.nix
   ];
 
   home.username = "green1490";
@@ -21,7 +22,6 @@
 
   programs.vesktop.enable = true;
   programs.vscode.enable = true;
-  programs.firefox.enable = true;
   programs.btop.enable = true;
   
 }

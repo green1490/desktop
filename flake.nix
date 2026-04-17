@@ -8,9 +8,15 @@
       # follows channel version
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = { self, nixpkgs, home-manager, zen-browser }: {
     nixosConfigurations = {
       rebecca = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -21,6 +27,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.green1490 = ./home.nix;
+            home-manager.extraSpecialArgs = { inherit zen-browser; };
           }
         ];
       };
