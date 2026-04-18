@@ -14,12 +14,17 @@
         nixpkgs.follows = "nixpkgs";
       };
     };
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser }: {
+  outputs = { self, nixpkgs, home-manager, zen-browser, silentSDDM }: {
     nixosConfigurations = {
       rebecca = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit silentSDDM; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager

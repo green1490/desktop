@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, silentSDDM, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      silentSDDM.nixosModules.default
     ];
 
   # Bootloader.
@@ -112,6 +113,11 @@
     enableCompletion = true;
     enableLsColors = true;
     shellInit = "eval \"$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/tonybaloney.omp.json)\"";
+  };
+
+  programs.silentSDDM = {
+    enable = true;
+    theme = "rei";
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
