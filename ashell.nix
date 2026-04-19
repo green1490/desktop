@@ -6,7 +6,7 @@
     settings = {
       modules = {
         center = [
-          "Window Title"
+          "WindowTitle"
         ];
         left = [
           "Workspaces"
