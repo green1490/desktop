@@ -10,6 +10,7 @@
     ./hyprland.nix
     ./zen.nix
     ./ashell.nix
+    ./hyprpaper.nix
   ];
 
   home.username = "green1490";
