@@ -22,11 +22,11 @@
         ];
       };
       appearance = {
-        primary_color = "#7aa2f7";
+        primary_color = "#5d8e8b";
         success_color = "#9ece6a";
         text_color = "#a9b1d6";
         workspace_colors = [
-          "#7aa2f7"
+          "#5d8e8b"
           "#9ece6a"
         ];
         danger_color = {
