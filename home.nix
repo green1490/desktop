@@ -6,7 +6,7 @@
     ./helix.nix
     ./anki.nix
     ./zsh.nix
-    ./wofi.nix
+    ./fuzzel.nix
     ./hyprland.nix
     ./zen.nix
     ./ashell.nix

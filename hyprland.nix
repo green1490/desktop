@@ -16,7 +16,7 @@
       # PROGRAMS
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun";
+      "$menu" = "fuzzel";
 
       # AUTOSTART
       exec-once = [ "ashell" ];
