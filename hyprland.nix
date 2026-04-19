@@ -19,7 +19,7 @@
       "$menu" = "wofi --show drun";
 
       # AUTOSTART
-      exec-once = [ "waybar" ];
+      exec-once = [ "ashell" ];
 
       # ENVIRONMENT VARIABLES
       env = [

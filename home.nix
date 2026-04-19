@@ -7,9 +7,9 @@
     ./anki.nix
     ./zsh.nix
     ./wofi.nix
-    ./waybar.nix
     ./hyprland.nix
     ./zen.nix
+    ./ashell.nix
   ];
 
   home.username = "green1490";
