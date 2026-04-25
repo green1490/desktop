@@ -120,6 +120,11 @@
     theme = "rei";
   };
 
+  environment.variables = {
+    NIXOS_OZONE_WL = "1";
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # Some programs need SUID wrappers, can be configured further or are

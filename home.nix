@@ -11,6 +11,7 @@
     ./zen.nix
     ./ashell.nix
     ./hyprpaper.nix
+    ./kitty.nix
   ];
 
   home.username = "green1490";

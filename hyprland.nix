@@ -1,11 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-
-  programs.kitty.enable = true;
-  home.sessionVariables.NIXOS_OZONE_WL = "1";
-  
-  wayland.windowManager.hyprland = {
+   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
     portalPackage = null;
