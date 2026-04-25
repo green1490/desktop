@@ -93,8 +93,8 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts
-      font-awesome
       jetbrains-mono
+      nerd-fonts.jetbrains-mono
     ];
     fontconfig = {
       enable = true;
