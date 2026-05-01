@@ -77,6 +77,8 @@
   # for incus
   virtualisation.incus.enable = true;
   networking.nftables.enable = true;
+  # containers and virtual machines could access the internet
+  networking.firewall.trustedInterfaces = [ "br0" ];
 
   services.displayManager.sddm = {
     enable = true;
