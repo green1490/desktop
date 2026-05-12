@@ -20,10 +20,12 @@
   home.packages = with pkgs; [
     spotify
     git
+    qbittorrent
   ];
 
   programs.vesktop.enable = true;
   programs.vscode.enable = true;
   programs.btop.enable = true;
-  
+  programs.mpv.enable = true;
+
 }
