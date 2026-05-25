@@ -16,6 +16,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "rebecca"; # Define your hostname.
+  networking.nameservers = [
+    "9.9.9.9"
+    "149.112.112.112"
+  ];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
