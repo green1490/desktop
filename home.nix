@@ -7,10 +7,8 @@
     ./anki.nix
     ./zsh.nix
     ./fuzzel.nix
-    ./hyprland.nix
     ./zen.nix
     ./ashell.nix
-    ./hyprpaper.nix
     ./kitty.nix
   ];
 
