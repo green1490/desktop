@@ -55,8 +55,6 @@
 
   # Configure console keymap
   console.keyMap = "hu";
-  
-  programs.hyprland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.green1490 = {
@@ -71,7 +69,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  
   environment.systemPackages = with pkgs; [
      dunst
      pipewire
@@ -126,11 +123,12 @@
     theme = "rei";
   };
 
+  programs.niri.enable = true;
+
   environment.variables = {
     NIXOS_OZONE_WL = "1";
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
   };
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # Some programs need SUID wrappers, can be configured further or are
