@@ -1,5 +1,10 @@
 {...}:
 
 {
-   programs.kitty.enable = true; 
+   programs.kitty = {
+      enable = true;
+      settings = {
+         enable_audio_bell = "no";
+      };
+   }; 
 }
