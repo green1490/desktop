@@ -12,6 +12,7 @@
     ./kitty.nix
     ./wpaperd.nix
     ./niri.nix
+    ./mako.nix
   ];
 
   home.username = "green1490";
