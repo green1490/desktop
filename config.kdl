@@ -10,6 +10,7 @@ prefer-no-csd
 screenshot-path null
 
 cursor {
+    xcursor-theme "Bibata-Modern-Classic"
     xcursor-size 20
 }
 

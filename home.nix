@@ -22,6 +22,7 @@
     spotify
     git
     qbittorrent
+    bibata-cursors
   ];
 
   programs.vesktop.enable = true;
