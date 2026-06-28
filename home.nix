@@ -19,7 +19,6 @@
   home.homeDirectory = "/home/green1490";
   home.stateVersion = "25.11";
   home.packages = with pkgs; [
-    spotify
     git
     qbittorrent
     bibata-cursors
