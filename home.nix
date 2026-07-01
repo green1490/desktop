@@ -22,6 +22,7 @@
     git
     qbittorrent
     bibata-cursors
+    opentofu
   ];
 
   programs.vesktop.enable = true;
