@@ -23,11 +23,11 @@
     qbittorrent
     bibata-cursors
     opentofu
+    google-cloud-sdk
   ];
 
   programs.vesktop.enable = true;
-  programs.vscode.enable = true;
   programs.btop.enable = true;
   programs.mpv.enable = true;
-
+  programs.zed-editor.enable = true;
 }
