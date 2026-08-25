@@ -24,6 +24,8 @@
     bibata-cursors
     opentofu
     google-cloud-sdk
+    ansible
+    spotify
   ];
 
   programs.vesktop.enable = true;
