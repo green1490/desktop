@@ -22,9 +22,6 @@
     git
     qbittorrent
     bibata-cursors
-    opentofu
-    google-cloud-sdk
-    ansible
     spotify
   ];
 
