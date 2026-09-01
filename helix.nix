@@ -2,7 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    nixd  
+    nixd
+    nil
   ];
   
   programs.helix = {
@@ -10,7 +11,10 @@
     languages = {
       language = [{
         name = "nix";
-        language-servers = [ "nixd" ];
+        language-servers = [
+          "nixd"
+          "nil"
+        ];
       }];
       
       language-server.nixd = {
