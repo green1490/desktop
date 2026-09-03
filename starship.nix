@@ -1,9 +1,7 @@
 { config, pkgs, ...}:
 
 {
-  programs.zsh.oh-my-zsh.enable = true;
-
-  programs.oh-my-posh = {
+  programs.starship = {
     enable = true;
     enableZshIntegration = true;
   };

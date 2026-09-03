@@ -112,9 +112,17 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    autosuggestions.enable = true;
     enableLsColors = true;
-    shellInit = "eval \"$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/tonybaloney.omp.json)\"";
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "git"
+      ];
+    };
+    interactiveShellInit = ''
+      eval "$(starship init zsh)"
+    '';
   };
 
   programs.silentSDDM = {

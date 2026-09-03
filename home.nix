@@ -5,7 +5,7 @@
   imports = [
     ./helix.nix
     ./anki.nix
-    ./zsh.nix
+    ./starship.nix
     ./fuzzel.nix
     ./zen.nix
     ./ashell.nix
