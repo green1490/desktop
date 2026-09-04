@@ -14,20 +14,14 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    silentSDDM = {
-      url = "github:uiriansan/SilentSDDM";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, silentSDDM }: let
+  outputs = { self, nixpkgs, home-manager, zen-browser }: let
     system = "x86_64-linux";
     
     in {
     nixosConfigurations.rebecca = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit silentSDDM; };
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager

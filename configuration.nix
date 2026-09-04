@@ -2,13 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, silentSDDM, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      silentSDDM.nixosModules.default
     ];
 
   # Bootloader.
@@ -80,11 +79,6 @@
   # containers and virtual machines could access the internet
   networking.firewall.trustedInterfaces = [ "br0" ];
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
-
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -125,11 +119,10 @@
     '';
   };
 
-  programs.silentSDDM = {
+  services.displayManager.plasma-login-manager = {
     enable = true;
-    theme = "rei";
   };
-
+  
   programs.niri.enable = true;
 
   environment.variables = {
