@@ -1,11 +1,6 @@
 {config, pkgs, ...}:
 
-{
-  home.packages = with pkgs; [
-    nixd
-    nil
-  ];
-  
+{  
   programs.helix = {
     enable = true;  
     languages = {

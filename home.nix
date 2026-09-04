@@ -23,6 +23,8 @@
     qbittorrent
     bibata-cursors
     spotify
+    nixd
+    nil
   ];
 
   programs.vesktop.enable = true;
