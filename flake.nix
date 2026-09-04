@@ -21,24 +21,25 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, silentSDDM }: {
-    nixosConfigurations = {
-      rebecca = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit silentSDDM; };
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.green1490 = ./home.nix;
-            home-manager.extraSpecialArgs = {
-              inherit zen-browser;
-            };
-          }
-        ];
-      };
+  outputs = { self, nixpkgs, home-manager, zen-browser, silentSDDM }: let
+    system = "x86_64-linux";
+    
+    in {
+    nixosConfigurations.rebecca = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = { inherit silentSDDM; };
+      modules = [
+        ./configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.green1490 = ./home.nix;
+          home-manager.extraSpecialArgs = {
+            inherit zen-browser;
+          };
+        }
+      ];
     };
   };
 }
