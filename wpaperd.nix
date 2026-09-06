@@ -2,7 +2,7 @@
 
 let
   path = builtins.path {
-    path = ./wallpaper.png;
+    path = ./wallpapers;
   };
 in {
   services.wpaperd = {
