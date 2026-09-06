@@ -8,9 +8,10 @@ in {
   services.wpaperd = {
     enable = true;
     settings = {
-      HDMI-A-1 = {
+      any = {
         inherit path;
         duration = "30s";
+        sorting = "descending";
       };
     };
   };
