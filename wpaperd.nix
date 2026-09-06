@@ -10,6 +10,7 @@ in {
     settings = {
       HDMI-A-1 = {
         inherit path;
+        duration = "30s";
       };
     };
   };
