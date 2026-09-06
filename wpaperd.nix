@@ -10,7 +10,7 @@ in {
     settings = {
       any = {
         inherit path;
-        duration = "30s";
+        duration = "5m";
         sorting = "descending";
       };
     };
