@@ -77,7 +77,7 @@
   virtualisation.incus.enable = true;
   networking.nftables.enable = true;
   # containers and virtual machines could access the internet
-  networking.firewall.trustedInterfaces = [ "br0" ];
+  # networking.firewall.trustedInterfaces = [];
 
   services.pipewire = {
     enable = true;
